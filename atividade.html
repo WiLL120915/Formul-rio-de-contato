@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="atividadeCSS.css">
+    <title>Envio de mensagem</title>
+</head>
+
+<body>
+    <h1>Formulário de Contato</h1>
+
+    <div class="container">
+        <form id="contato">
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text">
+            <span class="erro-texto"></span>
+
+            <label for="email">Email:</label>
+            <input id="email" type="email">
+            <span class="erro-texto"></span>
+
+            <label for="tema">Tema:</label>
+            <select id="tema">
+                <option selected disabled value="">Selecione</option>
+                <option value="sugestão">Sugestão</option>
+                <option value="reclamação">Reclamação</option>
+                <option value="duvida">Dúvida</option>
+                <option value="elogio">Elogio</option>
+                <option value="outros">Outros</option>
+            </select>
+            <span class="erro-texto"></span>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem"></textarea>
+            <span class="erro-texto"></span>
+
+            <button id="enviar" type="submit" disabled>Enviar</button>
+            <p id="sucesso" class="sucesso-texto"></p>
+            <p id="falha" class="falha-texto"></p>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <script>
+            emailjs.init("FkQRCiOpOqHca8kzp");
+        </script>
+        <script src="atividadeJs.js"></script>
+</body>
+
+
+</html>
